@@ -6,77 +6,101 @@
   <title>Environmental Sustainability Hub</title>
   <link type="text/css" rel="stylesheet" href="styles/site-plan.css">
   <script type="module" src="scripts/site-script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Environmental Sustainability Hub</h1>
-    <h2>Shakeen kumar</h2>
+    <h2>Shakeen Kumar</h2>
     <h2>WDD 131</h2>
   </header>
 
   <main>
     <hr>
-
-    <h2>Overview</h2>
-    <h3>Purpose</h3>
-    <p>This website provides resources, tips, and eco-friendly product recommendations to individuals who want to live sustainably and reduce their environmental impact.</p>
-
-    <h3>Audience</h3>
-    <p>The primary audience for this website will be environmentally conscious individuals looking for practical tips and eco-friendly products.</p>
-
-    <hr>
-    <h2>Branding</h2>
-    <h3>Website Logo</h3>
-    <picture>
-      <source srcset="images/logo.png" type="images/png"> 
-      <img src="images/logo.png" alt="Logo.png" width="200" height="200"> <!-- Set width and height for image -->
-    </picture>
+    <section>
+      <h2>Overview</h2>
+      <article>
+        <h3>Purpose</h3>
+        <p>This website provides resources, tips, and eco-friendly product recommendations to individuals who want to live sustainably and reduce their environmental impact.</p>
+      </article>
+      <article>
+        <h3>Audience</h3>
+        <p>The primary audience for this website will be environmentally conscious individuals looking for practical tips and eco-friendly products.</p>
+      </article>
+    </section>
 
     <hr>
-    <h2>Style Guide</h2>
-
-    <h3>Color Palette</h3>
-    <p>Palette URL: <a href="https://coolors.co/606c38-283618-fefae0-dda15e-bc6c25" target="_blank">Color Palette</a></p>
-    <p>Primary: <span class="primary">#606c38</span>, Secondary: <span class="secondary">#283618</span></p>
-
-    <h3>Typography</h3>
-    <p>Heading Font: Rock Salt, Paragraph Font: Roboto</p>
-
-    <hr>
-    <h2>Site Map</h2>
-    <div class="sitemap">
-      <div class="sm-home">Home</div>
-      <div class="sm-page2">Sustainable Living Tips</div>
-      <div class="sm-page3">Eco-Friendly Products</div>
-      <div class="sm-page4">Environmental Blog</div>
-    </div>
+    <section>
+      <h2>Branding</h2>
+      <h3>Website Logo</h3>
+      <picture>
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.png" alt="Environmental Sustainability Hub Logo" width="200" height="200">
+      </picture>
+    </section>
 
     <hr>
-    <h2>Content</h2>
-    <h3>Home page</h3>
-    <p>The home page introduces the site and offers key sustainability tips.</p>
-    <button id="toggleBtn">Show More Tips</button>
-    <div id="tipsSection" style="display:none;">
-      <p>Tip 1: Reduce, reuse, recycle.</p>
-      <p>Tip 2: Choose eco-friendly products.</p>
-    </div>
+    <section>
+      <h2>Style Guide</h2>
+      <h3>Color Palette</h3>
+      <p>Palette URL: <a href="https://coolors.co/606c38-283618-fefae0-dda15e-bc6c25" target="_blank">Color Palette</a></p>
+      <p>Primary: <span class="primary" style="background-color: #606c38; color: #fff; padding: 5px;">#606c38</span></p>
+      <p>Secondary: <span class="secondary" style="background-color: #283618; color: #fff; padding: 5px;">#283618</span></p>
 
-    <h3>Sustainable Living Tips</h3>
-    <p>This page offers practical tips on living sustainably.</p>
-
-    <h3>Eco-Friendly Products</h3>
-    <ul id="productList"></ul>
+      <h3>Typography</h3>
+      <p>Heading Font: Rock Salt, Paragraph Font: Roboto</p>
+    </section>
 
     <hr>
-    <h2>Wireframes</h2>
-    <img src="images/wireframe1.jpg" alt="Home page wireframe" width="300" height="400" />
-    <img src="images/wireframe2.png" alt="Mobile view wireframe" width="300" height="400" />
-    <img src="images/wireframe3.jpg" alt="Desktop view wireframe" width="300" height="400" />
+    <section>
+      <h2>Site Map</h2>
+      <div class="sitemap">
+        <div class="sm-home">Home</div>
+        <div class="sm-page2">Sustainable Living Tips</div>
+        <div class="sm-page3">Eco-Friendly Products</div>
+        <div class="sm-page4">Environmental Blog</div>
+      </div>
+    </section>
+
+    <hr>
+    <section>
+      <h2>Content</h2>
+      <article>
+        <h3>Home Page</h3>
+        <p>The home page introduces the site and offers key sustainability tips.</p>
+        <button id="toggleBtn" aria-expanded="false" aria-controls="tipsSection">Show More Tips</button>
+        <div id="tipsSection" style="display:none;">
+          <p>Tip 1: Reduce, reuse, recycle.</p>
+          <p>Tip 2: Choose eco-friendly products.</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Sustainable Living Tips</h3>
+        <p>This page offers practical tips on living sustainably.</p>
+      </article>
+
+      <article>
+        <h3>Eco-Friendly Products</h3>
+        <ul id="productList"></ul>
+      </article>
+    </section>
+
+    <hr>
+    <section>
+      <h2>Wireframes</h2>
+      <img src="images/wireframe1.jpg" alt="Wireframe of the Home page showing layout and structure" width="600" height="400" />
+      <img src="images/wireframe2.png" alt="Wireframe showing mobile view layout and structure" width="600" height="400" />
+      <img src="images/wireframe3.jpg" alt="Wireframe showing desktop view layout and structure" width="600" height="400" />
+    </section>
 
     <footer>
-      <p>Site Plan: <a href="https://shakeenkumar.github.io/personal-2/index.html">Home page</a></p>
-      <p>Site Plan: <a href="https://shakeenkumar.github.io/personal-2/Tips.html">Subpage 1</a></p>
-      <p>Site Plan: <a href="https://shakeenkumar.github.io/personal-2/friendly.html">Subpage 2</a></p>
+      <p>Visit the site pages:</p>
+      <ul>
+        <li><a href="https://shakeenkumar.github.io/personal-2/index.html">Home Page</a></li>
+        <li><a href="https://shakeenkumar.github.io/personal-2/Tips.html">Sustainable Living Tips</a></li>
+        <li><a href="https://shakeenkumar.github.io/personal-2/friendly.html">Eco-Friendly Products</a></li>
+      </ul>
     </footer>
   </main>
 </body>
