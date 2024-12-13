@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/friendly.css">
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Link to external stylesheet (minified version for performance) -->
+    <link rel="stylesheet" href="styles/friendly.min.css">
+    
+    <!-- SEO and Accessibility improvements -->
+    <meta name="description" content="The Environmental Sustainability Hub offers eco-friendly products that contribute to a sustainable future.">
+    <meta name="keywords" content="eco-friendly, sustainability, products, renewable resources, green products">
+    <meta name="author" content="Your Name or Organization">
+
     <title>Environmental Sustainability Hub</title>
     <base target="_blank">
 </head>
@@ -24,7 +35,8 @@
 
     <div id="hero">
         <div id="hero-box">
-            <img id="hero-img" src="images/friendly-products.jpg" alt="People enjoying white water rafting">
+            <!-- Lazy loading and modern image format (WebP) -->
+            <img id="hero-img" src="images/friendly-products.webp" alt="People enjoying white water rafting" loading="lazy">
         </div>
         <section id="hero-msg">
             <h1 class="home-title">Sustainable Living Friendly Products</h1>
@@ -37,15 +49,19 @@
 
     <main class="home-grid">
         <section class="tip1-card">
-            <img class="card-img" src="images/eco-products2.jpg" alt="sustainabil tip1">
+            <!-- Lazy loading and modern image format (WebP) -->
+            <img class="card-img" src="images/eco-products2.webp" alt="sustainabil tip1" loading="lazy">
             <h2>products 1</h2>
         </section>
         <section class="Tip2-card">
-            <img class="card-img" src="images/eco-products3.jpg" alt="sustainabil tip">
+            <!-- Lazy loading and modern image format (WebP) -->
+            <img class="card-img" src="images/eco-products3.webp" alt="sustainabil tip" loading="lazy">
             <h2>products 2</h2>
         </section>
-        <section class="Final-card"></section>
-        <img class="Final" src="images/eco-products1.jpg" alt="Final">
+        <section class="Final-card">
+            <!-- Lazy loading and modern image format (WebP) -->
+            <img class="Final" src="images/eco-products1.webp" alt="Final" loading="lazy">
+        </section>
         <section class="msg">
             <p> Eco-friendly products often prioritize the use of renewable resources, reduce energy consumption, and minimize waste generation. From biodegradable packaging materials to energy-efficient appliances, these items contribute to the overall well-being of our planet by lessening pollution, conserving natural resources, and supporting a circular economy. By choosing eco-friendly products, consumers not only make a positive impact on the environment but also contribute to a global shift towards more responsible and mindful consumption. Embracing these products is a tangible way for individuals and businesses alike to participate in the collective effort to create a healthier, greener world for future generations.</p>
         </section>
@@ -89,7 +105,8 @@
         </div>
     </footer>
 
-    <script src="scripts/friendly.js"></script>
+    <!-- Defer JavaScript for better performance -->
+    <script src="scripts/friendly.js" defer></script>
 </body>
 
 </html>
