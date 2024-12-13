@@ -1,93 +1,85 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to highlight the active navigation link
-    function highlightActiveLink() {
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            if (link.href === window.location.href) {
-                link.style.color = 'green';
-                link.style.fontWeight = 'bold';
-            }
-        });
+// script.js
+
+// Function to change the background color dynamically based on user input
+function changeBackgroundColor() {
+    const colorInput = document.getElementById("color-picker").value;
+    document.body.style.backgroundColor = colorInput;
+    localStorage.setItem('backgroundColor', colorInput); // Save color to localStorage
+}
+
+// Function to show a personalized message on the webpage
+function showPersonalizedMessage() {
+    const username = localStorage.getItem('username');
+    const messageElement = document.getElementById("personalized-message");
+
+    if (username) {
+        messageElement.textContent = `Welcome back, ${username}! Thanks for visiting our Environmental Sustainability Hub.`;
+    } else {
+        messageElement.textContent = `Welcome to the Environmental Sustainability Hub! Please log in.`;
     }
+}
 
-    // Function to display dynamic greeting based on the time of day
-    function displayGreeting() {
-        const greetingElement = document.createElement('p');
-        const hour = new Date().getHours();
-        let greetingText = '';
-        
-        if (hour < 12) {
-            greetingText = 'Good Morning! Welcome to our hub.';
-        } else if (hour < 18) {
-            greetingText = 'Good Afternoon! Explore eco-friendly solutions.';
-        } else {
-            greetingText = 'Good Evening! Ready to contribute to sustainability?';
-        }
-        
-        greetingElement.textContent = greetingText;
-        document.querySelector('#hero-msg').appendChild(greetingElement);
-    }
+// Function to store user inputted name in localStorage
+function storeUsername() {
+    const usernameInput = document.getElementById("username-input").value;
+    localStorage.setItem('username', usernameInput);
+    showPersonalizedMessage(); // Update the personalized message
+}
 
-    // Function to lazy load images
-    function lazyLoadImages() {
-        const lazyImages = document.querySelectorAll('img');
-        lazyImages.forEach(img => {
-            img.loading = 'lazy';
-        });
-    }
+// Function to reset all settings
+function resetSettings() {
+    localStorage.removeItem('username');
+    localStorage.removeItem('backgroundColor');
+    document.body.style.backgroundColor = ''; // Reset to default
+    showPersonalizedMessage(); // Update message to default
+}
 
-    // Function to handle "Book Now" button click event and store a booking in localStorage
-    function handleBookingClick() {
-        const bookingInfo = {
-            bookingDate: new Date().toLocaleString(),
-            customerName: prompt('Enter your name for booking:'),
-        };
-        
-        if (bookingInfo.customerName) {
-            localStorage.setItem('latestBooking', JSON.stringify(bookingInfo));
-            console.log(`Booking created: ${bookingInfo.customerName} on ${bookingInfo.bookingDate}`);
-            alert(`Thank you, ${bookingInfo.customerName}. Your booking is confirmed!`);
-        } else {
-            alert('Booking canceled. Please enter your name.');
-        }
-    }
+// Event listener for the color picker
+document.getElementById("color-picker").addEventListener("input", changeBackgroundColor);
 
-    // Function to retrieve and display the latest booking from localStorage
-    function displayLatestBooking() {
-        const booking = JSON.parse(localStorage.getItem('latestBooking'));
-        if (booking) {
-            const bookingMessage = `Latest Booking: ${booking.customerName} on ${booking.bookingDate}`;
-            const bookingElement = document.createElement('p');
-            bookingElement.textContent = bookingMessage;
-            document.querySelector('#latest-booking').appendChild(bookingElement);
-        }
-    }
-
-    // Function to update a list of eco-friendly tips using an array
-    function updateEcoTips() {
-        const ecoTips = [
-            "Switch to reusable shopping bags.",
-            "Use energy-efficient light bulbs.",
-            "Plant a tree to improve air quality.",
-            "Compost your food waste to reduce landfill impact.",
-            "Conserve water by fixing leaks and using water-saving appliances."
-        ];
-
-        const tipsList = document.querySelector('#eco-tips-list');
-        ecoTips.forEach(tip => {
-            const listItem = document.createElement('li');
-            listItem.textContent = tip;
-            tipsList.appendChild(listItem);
-        });
-    }
-
-    // Event listeners for interactivity
-    document.querySelector('.book').addEventListener('click', handleBookingClick);
-
-    // Initialize all dynamic features
-    highlightActiveLink();
-    displayGreeting();
-    lazyLoadImages();
-    displayLatestBooking();
-    updateEcoTips();
+// Event listener for the form submission
+document.getElementById("username-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+    storeUsername();
 });
+
+// Event listener for the reset button
+document.getElementById("reset-btn").addEventListener("click", resetSettings);
+
+// Event listener for page load to restore settings from localStorage
+window.addEventListener("load", function() {
+    const savedColor = localStorage.getItem('backgroundColor');
+    if (savedColor) {
+        document.body.style.backgroundColor = savedColor;
+    }
+
+    showPersonalizedMessage(); // Update personalized message on page load
+});
+
+// Example array manipulation: Store and display eco-friendly products in an array
+const products = [
+    { name: "Eco-Friendly Shampoo", price: 12.99, description: "A biodegradable, eco-friendly shampoo." },
+    { name: "Reusable Water Bottle", price: 19.99, description: "A reusable water bottle to reduce single-use plastic." },
+    { name: "Solar-Powered Lantern", price: 29.99, description: "A solar-powered lantern to light your outdoor adventures." }
+];
+
+// Function to display products dynamically
+function displayProducts() {
+    const productContainer = document.getElementById("product-list");
+    productContainer.innerHTML = ''; // Clear any existing content
+
+    products.forEach(product => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("product");
+        productElement.innerHTML = `
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
+        `;
+        productContainer.appendChild(productElement);
+    });
+}
+
+// Call function to display products on page load
+window.addEventListener("load", displayProducts);
+
