@@ -1,12 +1,14 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:ital,wght@1,300;1,400&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
 /* Set font families for the entire page */
 body {
     font-family: 'YourChosenFont', Arial, sans-serif;
     font-size: 22px;
     /* Backup fonts here */
 }
+
 .home-title {
     font-family: 'YourChosenHeadlineFont', Bradley Hand, sans-serif;
     font-size: 2em;
@@ -52,7 +54,7 @@ nav {
     display: flex;
     justify-content: space-around;
     padding-bottom: 5px; /* Add padding at the bottom */
-    background-color: #989191; /* Dark gray background color */
+    background-color: #333333; /* Dark gray background color */
 }
 
 nav a {
@@ -280,16 +282,16 @@ nav {
 
 /* Add box shadow to the message section */
 .msg {
-    grid-column: 2/12;
-    grid-row: 11/8;
+    grid-column: 7/12;
+    grid-row: 6/9;
 
 }
 
 /* Add box shadow to the final image */
 .Final {
     width: 100%;
-    grid-column: 3/9;
-    grid-row: 5/8;
+    grid-column: 2 / span 5;
+    grid-row: 6 / span 2;
     box-shadow: 5px 5px 10px #6f7364;
 }
 /* Responsive Design */
