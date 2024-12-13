@@ -103,7 +103,7 @@ footer {
 /* Add borders, border-radius, and box-sizing */
 .book, .join {
     background-color: #d9c2a3;
-    color: black;
+    color: rgb(188, 178, 178);
     text-decoration: none;
     font-size: 18px;
     padding: 15px 30px;
