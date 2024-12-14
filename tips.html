@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/tips.css">
-    <title>Environmental Sustainability Hub</title>
-    <base target="_blank">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips - Environmental Sustainability Hub</title>
+  <link rel="stylesheet" href="styles/tips.css">
 </head>
-<body class="subpage">
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tips.html">Tips</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
 
-    <header>
-        <a id="logo1" href="index.html">
-            <img src="images/logo.png" alt="Environmental Sustainability Hub Logo" loading="lazy">
-        </a>
-        <nav>
-            <a href="https://shakeenkumar.github.io/personal/" target="_blank" rel="noopener noreferrer">Home</a>
-            <a href="https://shakeenkumar.github.io/personal/friendly.html" target="_blank" rel="noopener noreferrer">Page 2</a>
-            <a href="https://shakeenkumar.github.io/personal/site-plan.html" target="_blank" rel="noopener noreferrer">Site Plan</a>
-            <a href="https://shakeenkumar.github.io/week-12-web-component/" target="_blank" rel="noopener noreferrer">About Us</a>
-        </nav>
-    </header>
+  <main>
+    <section>
+      <h1>Sustainability Tips</h1>
+      <ul id="tip-list">
+        <li>
+          <img src="images/reduce-reuse-recycle.jpg" alt="Recycle" loading="lazy">
+          Reduce, Reuse, Recycle
+        </li>
+        <li>
+          <img src="images/energy-efficient.jpg" alt="Energy-Efficient Appliances" loading="lazy">
+          Use Energy-Efficient Appliances
+        </li>
+        <li>
+          <img src="images/sustainable-brands.jpg" alt="Sustainable Brands" loading="lazy">
+          Support Sustainable Brands
+        </li>
+        <li>
+          <img src="images/reduce-water.jpg" alt="Reduce Water Consumption" loading="lazy">
+          Reduce Water Consumption
+        </li>
+        <li>
+          <img src="images/renewable-energy.jpg" alt="Renewable Energy" loading="lazy">
+          Opt for Renewable Energy
+        </li>
+      </ul>
+    </section>
+  </main>
 
-    <div id="hero">
-        <div id="hero-box">
-            <!-- Lazy load the hero image -->
-            <img id="hero-img" src="images/tips.jpg" alt="People enjoying white water rafting" loading="lazy">
-        </div>
-        <section id="hero-msg">
-            <h1 class="home-title">Sustainable Living Tips</h1>
-            <h4>Towards a Sustainable Tomorrow</h4>
-            <div class="button-box">
-                <a class="book" href="https://shakeenkumar.github.io/wrr/contactus.html" target="_blank" rel="noopener noreferrer">Book Now</a>
-            </div>
-        </section>
+  <footer>
+    <p>Environmental Sustainability Hub 2024</p>
+    <p>Site Plan: <a href="https://shakeenkumar.github.io/personal/site-plan.html" target="_blank" rel="noopener noreferrer">Site Plan</a></p>
+    <div class="social">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/facebook.png" alt="Facebook icon" loading="lazy">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/twitter.png" alt="Twitter icon" loading="lazy">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.png" alt="Instagram icon" loading="lazy">
+      </a>
     </div>
+  </footer>
 
-    <main class="home-grid">
-        <section class="tip1-card">
-            <!-- Lazy load the first tip image -->
-            <img class="card-img" src="images/tip1.jpg" alt="Sustainability tip 1" loading="lazy">
-            <h2>Tip 1</h2>
-        </section>
-        <section class="tip2-card">
-            <!-- Lazy load the second tip image -->
-            <img class="card-img" src="images/tip2.jpg" alt="Sustainability tip 2" loading="lazy">
-            <h2>Tip 2</h2>
-        </section>
-        <section class="final-card">
-            <!-- Lazy load the final tip image -->
-            <img class="final" src="images/Final-tip.jpg" alt="Final sustainability tip" loading="lazy">
-        </section>
-        
-        <section class="msg">
-            <p>To foster a more environmentally sustainable lifestyle, consider incorporating these tips into your daily routine. Start by minimizing single-use plastics, opting for reusable alternatives such as water bottles, bags, and containers. Embrace energy efficiency by using LED bulbs, turning off lights when not in use, and unplugging electronics when they're not needed. Reduce your carbon footprint by choosing sustainable transportation options, such as walking, biking, or using public transportation. When possible, support local and eco-friendly products, reducing the environmental impact of transportation and promoting sustainable practices.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>Environmental Sustainability Hub 2024</p>
-        <p>Site Plan: <a href="https://shakeenkumar.github.io/personal/site-plan.html" target="_blank" rel="noopener noreferrer">Site Plan</a></p>
-        <div class="social">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/facebook.png" alt="Facebook icon" loading="lazy">
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/twitter.png" alt="Twitter icon" loading="lazy">
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/instagram.png" alt="Instagram icon" loading="lazy">
-            </a>
-        </div>
-    </footer>
-
-    <!-- Link to JavaScript file -->
-    <script src="scripts/tips.js"></script>
-
+  <script src="scripts/tips.js"></script>
 </body>
 </html>
