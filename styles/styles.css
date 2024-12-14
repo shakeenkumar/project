@@ -409,12 +409,12 @@ h4 {
 /* Background color for the .msg element */
 .msg {
     background-color: #ffffff; /* White background color */
-    color: #333333; /* Dark gray text color */
+    color: #ece0e0; /* Dark gray text color */
 }
 
 /* Text color for h2 elements inside .msg */
 .msg h2 {
-    color: #0077cc; /* Blue text color */
+    color: #dde7ef; /* Blue text color */
 }
 
 /* Text color for paragraphs inside .msg */
