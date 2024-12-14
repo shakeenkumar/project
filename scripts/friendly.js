@@ -2,7 +2,7 @@
 const products = [
     {
       name: "Reusable Water Bottle",
-      image: "images/reusable-bottle.png",
+      image: "images/reusable-bottle.jpg",
       description: "Eco-friendly stainless steel bottle.",
       price: "$15.99"
     },
