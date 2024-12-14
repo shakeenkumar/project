@@ -64,19 +64,28 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(`Welcome back, ${storedUsername}!`);
     }
 
-    // Lazy loading example: loading images when in view
-    const lazyImages = document.querySelectorAll("img");
+    // Lazy loading using IntersectionObserver
+    const lazyImages = document.querySelectorAll("img.lazy");
 
-    function lazyLoad() {
-        lazyImages.forEach(image => {
-            if (image.getBoundingClientRect().top < window.innerHeight) {
+    const observerOptions = {
+        root: null,  // Use the viewport as the root
+        rootMargin: "0px",  // Trigger loading when images are in the viewport
+        threshold: 0.1  // Trigger when 10% of the image is visible
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
                 image.src = image.dataset.src; // Load the actual image
                 image.classList.remove("lazy");
+                observer.unobserve(image); // Stop observing after loading
             }
         });
-    }
+    }, observerOptions);
 
-    // Listen for scrolling to load images
-    window.addEventListener("scroll", lazyLoad);
-    lazyLoad();  // Call on initial load
+    // Observe each lazy image
+    lazyImages.forEach(image => {
+        imageObserver.observe(image);
+    });
 });
