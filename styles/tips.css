@@ -90,12 +90,12 @@ body {
   }
   
   #tip-list img {
-    width: 120px; /* Increased image size */
-    height: 120px; /* Increased image size */
+    width: 120px; /* Set image width */
+    height: 120px; /* Set image height to same as width for square shape */
     margin-right: 20px;
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image doesn't stretch */
-    border: 2px solid #388e3c; /* Add a border for a cleaner, sharper look */
+    border-radius: 8px; /* Slightly rounded corners */
+    object-fit: cover; /* Ensure the image covers the entire area without stretching */
+    border: 2px solid #388e3c; /* Add a border for a cleaner look */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow to make the image pop */
   }
   
