@@ -1,51 +1,82 @@
-// This JavaScript file includes dynamic interactions for the website.
+document.addEventListener("DOMContentLoaded", function () {
+    // Array to store sustainability tips
+    const tips = [
+        {
+            title: "Tip 1: Reduce Plastic Waste",
+            description: "Minimize single-use plastics by opting for reusable bags, bottles, and containers."
+        },
+        {
+            title: "Tip 2: Save Energy",
+            description: "Switch to LED bulbs, turn off lights when not in use, and unplug electronics when they're not needed."
+        },
+        {
+            title: "Tip 3: Choose Sustainable Transportation",
+            description: "Reduce your carbon footprint by walking, biking, or using public transportation."
+        }
+    ];
 
-// Event listener for when the page is loaded
-document.addEventListener('DOMContentLoaded', function () {
-    loadLikesFromStorage();  // Load saved like counts on page load
+    // Display tips dynamically in the tips section
+    const tipsSection = document.querySelector(".home-grid");
+    tips.forEach(tip => {
+        const tipCard = document.createElement("section");
+        tipCard.classList.add("tip-card");
 
-    // Add event listeners to all like buttons
-    const likeButtons = document.querySelectorAll('.like-btn');
-    likeButtons.forEach(button => {
-        button.addEventListener('click', handleLikeClick);
+        const tipTitle = document.createElement("h2");
+        tipTitle.textContent = tip.title;
+
+        const tipDesc = document.createElement("p");
+        tipDesc.textContent = tip.description;
+
+        tipCard.appendChild(tipTitle);
+        tipCard.appendChild(tipDesc);
+        tipsSection.appendChild(tipCard);
     });
-});
 
-// Function to handle the like button click
-function handleLikeClick(event) {
-    const button = event.target;
-    const tipId = button.dataset.tip;
-    const likeCountSpan = button.nextElementSibling;
+    // Form validation example
+    const form = document.querySelector("form");  // Make sure the form exists
+    const usernameInput = document.querySelector("#username");  // Example of form input validation
+    const errorMsg = document.querySelector("#error-msg");  // Element to show error message
 
-    // Get the current like count from the span and increment it
-    let likeCount = parseInt(likeCountSpan.textContent.split(' ')[0]);
-    likeCount++;
+    // Function to validate username input
+    function validateForm(event) {
+        event.preventDefault();
+        const username = usernameInput.value.trim();
 
-    // Update the like count on the page
-    likeCountSpan.textContent = `${likeCount} Likes`;
-
-    // Save the updated like count in localStorage
-    saveLikeCount(tipId, likeCount);
-}
-
-// Function to save the like count to localStorage
-function saveLikeCount(tipId, likeCount) {
-    const likeCounts = JSON.parse(localStorage.getItem('likeCounts')) || {};
-    likeCounts[tipId] = likeCount;
-    localStorage.setItem('likeCounts', JSON.stringify(likeCounts));
-}
-
-// Function to load like counts from localStorage
-function loadLikesFromStorage() {
-    const likeCounts = JSON.parse(localStorage.getItem('likeCounts')) || {};
-
-    // Update each like count on the page based on localStorage values
-    for (let tipId in likeCounts) {
-        const likeCount = likeCounts[tipId];
-        const tipElement = document.getElementById(`tip${tipId}`);
-        if (tipElement) {
-            const likeCountSpan = tipElement.querySelector('.like-count');
-            likeCountSpan.textContent = `${likeCount} Likes`;
+        if (username === "") {
+            errorMsg.textContent = "Username cannot be empty!";
+            errorMsg.style.color = "red";
+        } else {
+            errorMsg.textContent = "";
+            // Save username to localStorage for future use
+            localStorage.setItem("username", username);
+            alert(`Welcome, ${username}!`);
         }
     }
-}
+
+    // Attach form validation function
+    if (form) {
+        form.addEventListener("submit", validateForm);
+    }
+
+    // Greeting user with stored username if available
+    const storedUsername = localStorage.getItem("username");
+    if (storedUsername) {
+        alert(`Welcome back, ${storedUsername}!`);
+    }
+
+    // Lazy loading example: loading images when in view
+    const lazyImages = document.querySelectorAll("img");
+
+    function lazyLoad() {
+        lazyImages.forEach(image => {
+            if (image.getBoundingClientRect().top < window.innerHeight) {
+                image.src = image.dataset.src; // Load the actual image
+                image.classList.remove("lazy");
+            }
+        });
+    }
+
+    // Listen for scrolling to load images
+    window.addEventListener("scroll", lazyLoad);
+    lazyLoad();  // Call on initial load
+});
