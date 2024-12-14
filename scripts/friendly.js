@@ -4,19 +4,22 @@ const products = [
       name: "Biodegradable Bags",
       image: "images/biodegradable-bags.jpg",
       description: "Compostable trash bags for sustainability.",
-      price: "$9.99"
+      price: "$9.99",
+      use: "Perfect for eco-friendly waste disposal. Great for reducing plastic usage and supporting sustainability."
     },
     {
       name: "Solar Charger",
       image: "images/solar-charger.jpg",
       description: "Portable solar charger for devices.",
-      price: "$29.99"
+      price: "$29.99",
+      use: "Ideal for outdoor activities. Charge your devices using solar energy, reducing dependence on conventional electricity."
     },
     {
       name: "Bamboo Toothbrush",
       image: "images/product3.jpg",
       description: "Durable, eco-friendly bamboo toothbrush.",
-      price: "$3.99"
+      price: "$3.99",
+      use: "A sustainable alternative to plastic toothbrushes. Helps reduce plastic waste while maintaining oral hygiene."
     }
   ];
   
@@ -31,55 +34,13 @@ const products = [
           <h3>${product.name}</h3>
           <p>${product.description}</p>
           <p class="price">${product.price}</p>
+          <p class="use">${product.use}</p> <!-- Added use description -->
         </div>
       `;
       productGrid.innerHTML += productCard;
     });
   }
   
-  // Feedback Form Logic
-  const feedbackForm = document.getElementById("feedback-form");
-  const formDataKey = "feedbackData";
-  
-  // Save Feedback to LocalStorage
-  feedbackForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-  
-    if (name && email && message) {
-      const feedbackData = { name, email, message };
-      localStorage.setItem(formDataKey, JSON.stringify(feedbackData));
-  
-      alert("Thank you for your feedback!");
-      feedbackForm.reset();
-    } else {
-      alert("Please fill out all fields.");
-    }
-  });
-  
-  // Load Feedback from LocalStorage
-  function loadFeedbackData() {
-    const savedData = localStorage.getItem(formDataKey);
-    if (savedData) {
-      const { name, email, message } = JSON.parse(savedData);
-      document.getElementById("name").value = name;
-      document.getElementById("email").value = email;
-      document.getElementById("message").value = message;
-    }
-  }
-  
-  // Lazy Load Hero Image
-  document.addEventListener("DOMContentLoaded", () => {
-    const heroImage = document.querySelector(".hero-image");
-    if (heroImage) {
-      heroImage.loading = "lazy";
-    }
-  });
-  
   // Initialize Page
   renderProducts();
-  loadFeedbackData();
   
