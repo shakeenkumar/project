@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/tips.css">
     <title>Environmental Sustainability Hub</title>
     <base target="_blank">
 </head>
-<body>
+<body class="subpage">
+
     <center>
         <header>
             <a id="logo1" href="index.html">
-                <img src="images/logo.png" alt="Logo 1">
+                <img src="images/logo.png" alt="Logo 1.png">
             </a>
             <nav>
                 <a href="https://shakeenkumar.github.io/personal/">Home</a>
@@ -20,13 +21,14 @@
                 <a href="https://shakeenkumar.github.io/week-12-web-component/">About Us</a>
             </nav>
         </header>
+
         <div id="hero">
             <div id="hero-box">
                 <img id="hero-img" src="images/tips.jpg" alt="People enjoying white water rafting">
             </div>
             <section id="hero-msg">
                 <h1 class="home-title">Sustainable Living Tips</h1>
-                <h4>Towards a Sustainable Tomorrow</h4>
+                <h4>Towards a Sustainable Tomorrow </h4>
                 <div class='button-box'>
                     <a class='book' href="https://shakeenkumar.github.io/wrr/contactus.html">Book Now</a>
                 </div>
@@ -34,51 +36,46 @@
         </div>
 
         <main class="home-grid">
-            <!-- Dark Mode Button -->
-            <button id="darkModeButton">Switch to Dark Mode</button>
-
-            <!-- Tips Section -->
-            <section id="tips-container"></section>
-
-            <!-- Contact Form -->
-            <section id="contact-section">
-                <h2>Contact Us</h2>
-                <form id="contact">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required>
-                    <br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                    <br>
-                    <label for="message">Message:</label>
-                    <textarea id="message" rows="4" required></textarea>
-                    <br>
-                    <button type="submit">Send Message</button>
-                </form>
+            <section class="tip1-card">
+                <img class="card-img" src="images/tip1.jpg" alt="sustainability tip 1">
+                <h2>Tip 1</h2>
             </section>
-
-            <!-- Messages Section -->
-            <section id="messages-container"></section>
+            <section class="tip2-card">
+                <img class="card-img" src="images/tip2.jpg" alt="sustainability tip 2">
+                <h2>Tip 2</h2>
+            </section>
+            <section class="final-card">
+                <img class="Final" src="images/Final-tip.jpg" alt="Final Tip">
+            </section>
+            <section class="msg">
+                <p>To foster a more environmentally sustainable lifestyle, consider incorporating these tips into your daily routine. Start by minimizing single-use plastics, opting for reusable alternatives such as water bottles, bags, and containers. Embrace energy efficiency by using LED bulbs, turning off lights when not in use, and unplugging electronics when they're not needed. Reduce your carbon footprint by choosing sustainable transportation options, such as walking, biking, or using public transportation. When possible, support local and eco-friendly products, reducing the environmental impact of transportation and promoting sustainable practices.</p>
+            </section>
         </main>
 
         <footer>
-            <p>Environment Sustainable Hub 2023</p>
+            <p>Environmental Sustainability Hub 2023</p>
             <p>Site Plan: <a href="https://shakeenkumar.github.io/personal/site-plan.html">Site Plan</a></p>
             <div class="social">
                 <a href="https://facebook.com">
-                    <img src="images/facebook.png" alt="Facebook">
+                    <img src="images/facebook.png" alt="facebook icon">
                 </a>
                 <a href="https://twitter.com">
-                    <img src="images/twitter.png" alt="Twitter">
+                    <img src="images/twitter.png" alt="twitter icon">
                 </a>
                 <a href="https://instagram.com">
-                    <img src="images/instagram.png" alt="Instagram">
+                    <img src="images/instagram.png" alt="instagram icon">
                 </a>
             </div>
         </footer>
+
+        <div id="content">
+            <div id="background"></div>
+            <div class="msg"></div>
+        </div>
+
     </center>
 
-    <!-- JavaScript -->
+    <!-- Linking to external JavaScript -->
     <script src="scripts/tips.js"></script>
 </body>
 </html>
