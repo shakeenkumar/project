@@ -95,6 +95,8 @@ body {
     margin-right: 20px;
     border-radius: 50%;
     object-fit: cover; /* Ensures the image doesn't stretch */
+    border: 2px solid #388e3c; /* Add a border for a cleaner, sharper look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow to make the image pop */
   }
   
   #tip-list li p {
