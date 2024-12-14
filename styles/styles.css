@@ -273,11 +273,11 @@ nav {
 
 /* Add box shadow to the message section */
 .msg {
-    background-color: #6f7364;
+    background-color: #e7ebdc;
     padding: 35px;
     grid-column: 6/10;
     grid-row: 6/7;
-    box-shadow: 5px 5px 10px #6f7364;
+    box-shadow: 5px 5px 10px #d8dbd1;
 }
 
 /* Add box shadow to the mountains image */
