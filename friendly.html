@@ -1,95 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/friendly.css">
-    <title>Environmental Sustainability Hub</title>
-    <base target="_blank">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Friendly Products</title>
+  <link rel="stylesheet" href="styles/products.css">
 </head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/logo.png" alt="Friendly Products Logo" loading="lazy">
+      </div>
+      <ul>
+        <li><a href="https://shakeenkumar.github.io/project/tips">Tips</a></li>
+        <li><a href="https://shakeenkumar.github.io/project/index.html">Home</a></li>
+        <li><a href="https://shakeenkumar.github.io/week-12-web-component/">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<body class="subpage">
-    <header>
-        <a id="logo1" href="index.html">
-            <img src="images/logo.png" alt="Logo 1.png">
-        </a>
-        <nav>
-            <a href="https://shakeenkumar.github.io/project/index.html">Home</a>
-            <a href="https://shakeenkumar.github.io/project/tips.html">Page 1</a>
-            <a href="https://shakeenkumar.github.io/project/site-plan.html">Site Plan</a>
-            <a href="https://shakeenkumar.github.io/week-12-web-component/">About Us</a>
-        </nav>
-    </header>
-
-    <div id="hero">
-        <div id="hero-box">
-            <img id="hero-img" src="images/friendly-products.png" alt="People enjoying white water rafting">
-        </div>
-        <section id="hero-msg">
-            <h1 class="home-title">Sustainable Living Friendly Products</h1>
-            <h4>Towards a Sustainable Tomorrow</h4>
-            <div class='button-box'>
-                <a class='book' href="https://shakeenkumar.github.io/wrr/contactus.html">Book Now</a>
-            </div>
-        </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Hero Image - Sustainable Products" class="hero-image" loading="lazy">
+    <div class="hero-text">
+      <h1>Eco-Friendly Products for a Sustainable Future</h1>
+      <p>Explore our range of sustainable, eco-conscious products designed to make a difference.</p>
     </div>
+  </section>
 
-    <main class="home-grid">
-        <section class="tip1-card">
-            <img class="card-img" src="images/eco-products2.webp" alt="sustainabil tip1">
-            <h2>products 1</h2>
-        </section>
-        <section class="Tip2-card">
-            <img class="card-img" src="images/eco-products3.webp" alt="sustainabil tip">
-            <h2>products 2</h2>
-        </section>
-        <section class="Final-card"></section>
-        <img class="Final" src="images/eco-products1.png" alt="Final">
-        <section class="msg">
-            <p> Eco-friendly products often prioritize the use of renewable resources, reduce energy consumption, and minimize waste generation. From biodegradable packaging materials to energy-efficient appliances, these items contribute to the overall well-being of our planet by lessening pollution, conserving natural resources, and supporting a circular economy. By choosing eco-friendly products, consumers not only make a positive impact on the environment but also contribute to a global shift towards more responsible and mindful consumption. Embracing these products is a tangible way for individuals and businesses alike to participate in the collective effort to create a healthier, greener world for future generations.</p>
-        </section>
-    </main>
+  <!-- Products Section -->
+  <main>
+    <section class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid" id="product-grid">
+        <!-- Dynamic Products will be inserted here -->
+      </div>
+    </section>
 
-    <!-- Dynamic Content Section -->
-    <div class="msg">
-        <!-- Personalized Message -->
-        <p id="personalized-message"></p>
+    <!-- Feedback Form -->
+    <section class="feedback">
+      <h2>We Value Your Feedback</h2>
+      <form id="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <!-- Color Picker -->
-        <label for="color-picker">Pick a background color:</label>
-        <input type="color" id="color-picker">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <!-- Username Input Form -->
-        <form id="username-form">
-            <input type="text" id="username-input" placeholder="Enter your name">
-            <button type="submit">Submit</button>
-        </form>
+        <label for="message">Feedback:</label>
+        <textarea id="message" name="message" placeholder="Share your thoughts" rows="4" required></textarea>
 
-        <!-- Reset Settings Button -->
-        <button id="reset-btn">Reset Settings</button>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Environmental Sustainability Hub</p>
+    <p>Site Plan: <a href="https://shakeenkumar.github.io/project/site-plan.html">Site Plan</a></p>
+    <div class="social">
+      <a href="https://facebook.com">
+        <img src="images/facebook.png" alt="Facebook icon">
+      </a>
+      <a href="https://twitter.com">
+        <img src="images/twitter.png" alt="Twitter icon">
+      </a>
+      <a href="https://instagram.com">
+        <img src="images/instagram.png" alt="Instagram icon">
+      </a>
     </div>
+  </footer>
 
-    <!-- Product List Section -->
-    <div id="product-list"></div>
-
-    <footer>
-        <p>Environment sustainable Hub 2023</p>
-        <p>Site Plan: <a href="https://shakeenkumar.github.io/project/site-plan.html">Site Plan</a></p>
-        <div class="social">
-            <a href="https://facebook.com">
-                <img src="images/facebook.png" alt="fb icon">
-            </a>
-            <a href="https://twitter.com">
-                <img src="images/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.png" alt="instagram icon">
-            </a>
-        </div>
-    </footer>
-
-    <script src="scripts/friendly.js"></script>
+  <script src="scripts/products.js"></script>
 </body>
-
 </html>
