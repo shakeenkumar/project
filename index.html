@@ -10,8 +10,9 @@
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
-        <a id="logo1" href="index.html">
+        <a id="logo1" href="index.html" aria-label="Environmental Hub Logo">
             <img src="images/logo.png" alt="Environmental Sustainability Hub Logo">
         </a>
         <nav>
@@ -21,58 +22,69 @@
             <a href="https://shakeenkumar.github.io/project/site-plan.html">Site Plan</a>
             <a href="https://shakeenkumar.github.io/week-12-web-component/">About Us</a>
         </nav>
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Theme">Toggle Theme</button>
     </header>
 
     <!-- Hero Section -->
-    <div id="hero">
-        <div id="hero-box">
-            <img id="hero-img" src="images/envinorment1.jpg" alt="People enjoying white water rafting">
-        </div>
-        <section id="hero-msg">
+    <section id="hero">
+        <figure>
+            <img id="hero-img" src="images/envinorment1.jpg" loading="lazy" alt="People enjoying eco-friendly activities">
+        </figure>
+        <div id="hero-msg">
             <h1 class="home-title">A Hub for Sustainable Living</h1>
             <h4>Towards a Sustainable Tomorrow</h4>
             <div class='button-box'>
-                <a class='book' href="https://shakeenkumar.github.io/wrr/contactus.html">Book Now</a>
+                <a class='book' href="#modal">Book Now</a>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <main class="home-grid">
         <section class="sustainable-card">
-            <img class="card-img" src="images/sustainable tip.jpg" alt="Environmental sustainability tips">
+            <img class="card-img" src="images/sustainable tip.jpg" loading="lazy" alt="Tips for environmental sustainability">
             <h2>Environmental Sustainable Tips</h2>
         </section>
         <section class="eco-friendly-card">
-            <img class="card-img" src="images/eco friendly.jpg" alt="Eco-friendly products">
+            <img class="card-img" src="images/eco friendly.jpg" loading="lazy" alt="Eco-friendly products for sustainability">
             <h2>Eco-friendly Products</h2>
         </section>
-        <img class="HUB" src="images/HUB.jpg" alt="HUB">
+        <figure>
+            <img class="HUB" src="images/HUB.jpg" loading="lazy" alt="Environmental Sustainability Hub banner">
+        </figure>
         <section class="msg">
             <h2>Let's Live Sustainably</h2>
-            <p>The Environmental Sustainability Hub is your gateway to a world of eco-conscious living. Our mission is to inspire and empower individuals to make sustainable choices that benefit both the planet and their well-being. As you explore our virtual eco-oasis, you'll find a wealth of information, inspiration, and resources to help you start your journey towards a greener, more responsible lifestyle.</p>
-            <a class='join' href="https://shakeenkumar.github.io/week-12-web-component/">Join Us</a>
+            <p>The Environmental Sustainability Hub is your gateway to a world of eco-conscious living. Start your journey towards a greener, more responsible lifestyle today.</p>
+            <a class='join' href="#modal">Join Us</a>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Environmental Sustainability Hub</p>
-        <p>Site Plan: <a href="https://shakeenkumar.github.io/project/site-plan.html">Site Plan</a></p>
+        <p>Site Plan: <a href="https://shakeenkumar.github.io/project/site-plan.html">View Site Plan</a></p>
         <div class="social">
-            <a href="https://facebook.com">
-                <img src="images/facebook.png" alt="Facebook icon">
+            <a href="https://facebook.com" aria-label="Facebook">
+                <img src="images/facebook.png" loading="lazy" alt="Facebook icon">
             </a>
-            <a href="https://twitter.com">
-                <img src="images/twitter.png" alt="Twitter icon">
+            <a href="https://twitter.com" aria-label="Twitter">
+                <img src="images/twitter.png" loading="lazy" alt="Twitter icon">
             </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.png" alt="Instagram icon">
+            <a href="https://instagram.com" aria-label="Instagram">
+                <img src="images/instagram.png" loading="lazy" alt="Instagram icon">
             </a>
         </div>
     </footer>
 
-    <!-- JS -->
+    <!-- Modal for Join Us -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p>Thank you for joining us in making the planet more sustainable!</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 
