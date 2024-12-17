@@ -142,7 +142,6 @@ footer a {
     margin-right: 10px;
 }
 
-
 /* Header Grid */
 header {
     display: grid;
@@ -191,9 +190,11 @@ nav {
 #hero-msg h4 {
     color: rgb(233, 217, 217);
 }
+
 #hero-msg h1 {
     color: rgb(236, 224, 224);
 }
+
 /* Main Grid */
 /* Set the width of .card-img and .mountains to 100% */
 .card-img, .HUB {
@@ -259,6 +260,7 @@ nav {
     grid-column: 6 / span 5;
     grid-row: 6 / span 1;
 }
+
 /* Add hover effect and box shadow to card images */
 .card-img {
     border: 10px solid #d9c2a3;
@@ -287,6 +289,7 @@ nav {
     grid-row: 5/8;
     box-shadow: 5px 5px 10px #6f7364;
 }
+
 /* Responsive Design */
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
@@ -378,69 +381,16 @@ h4 {
 /* Set the width for the logo */
 .logo1 image {
     width: 50px;
+    height: 50px;
 }
 
-/* Set the width for all the card icons */
-.icon {
-    width: 80px;
-}
-
-/* Set a responsive width for the hero image */
-#hero-img {
-    width: 100%;
-}
-
-/* Background color for elements with class .book and .join */
-.book,
-.join {
-    background-color: #ffcc00; /* Yellow background color */
-    color: #333333; /* Dark gray text color */
-}
-
-/* Background color for .book and .join on hover */
-.book:hover,
-.join:hover {
-    background-color: #ff9900; /* Orange background color on hover */
-    color: #ffffff; /* White text color on hover */
-}
-
-/* Set the height and background color for the background div
-
-/* Background color for the .msg element */
-.msg {
-    background-color: #ffffff; /* White background color */
-    color: #333333; /* Dark gray text color */
-}
-
-/* Text color for h2 elements inside .msg */
-.msg h2 {
-    color: #0077cc; /* Blue text color */
-}
-
-/* Text color for paragraphs inside .msg */
-.msg p {
-    color: #2d2c2c; /* Gray text color */
-}
-
-/* Increase the font size of footer text */
-footer p {
-    font-size: 1.2em;
-}
-
-/* Background color for the footer */
-footer {
-    background-color: #333333; /* Dark gray background color */
-    color: #ffffff; /* White text color */
-}
-
-/* Text color for footer links */
-footer a {
-    color: #0077cc; /* Blue text color */
+/* Set styles for .book and .join */
+.book, .join {
+    background-color: #d9c2a3;
+    color: rgb(188, 178, 178);
     text-decoration: none;
-}
-
-/* Text color for footer links on hover */
-footer a:hover {
-    color: #ff9900; /* Orange text color on hover */
-    text-decoration: underline;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
